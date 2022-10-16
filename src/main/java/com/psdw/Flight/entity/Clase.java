@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Clase {
 	
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer ID_Clase;
 	private String nombre;
 	
