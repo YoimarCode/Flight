@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
  * @author JEAN
  */
 @Repository
-public interface PasajeroRepository extends JpaRepository<Pasajero, Object>{
+public interface PasajeroRepository extends JpaRepository<Pasajero, Integer>{
     
 }
