@@ -15,7 +15,7 @@ import com.psdw.Flight.entity.Clase;
 import com.psdw.Flight.service.ClaseService;
 
 @RestController
-@RequestMapping("/clases")
+@RequestMapping("/Clases")
 public class ClaseController {
 	@Autowired
 	private ClaseService clService;

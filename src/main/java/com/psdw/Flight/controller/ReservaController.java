@@ -11,34 +11,32 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.psdw.Flight.entity.Silla;
-import com.psdw.Flight.service.SillaService;
+import com.psdw.Flight.entity.Reserva;
+import com.psdw.Flight.service.ReservaService;
 
 @RestController
-@RequestMapping("/Sillas")
-public class SillaController {
-	
-	@Autowired
-	private SillaService sillaService;
+@RequestMapping("/Reservas")
+public class ReservaController {
+    @Autowired
+	private ReservaService reservaService;
 	
 	@GetMapping
-	public List<Silla> listar(){
-		return sillaService.listarSillas();
+	public List<Reserva> listar(){
+		return reservaService.listarReservas();
 	}
 	
 	@PostMapping
-	public Silla insertar(@RequestBody Silla silla) {
-		return sillaService.CrearSilla(silla);
+	public Reserva insertar(@RequestBody Reserva reserva) {
+		return reservaService.crearReserva(reserva);
 	}
 	
 	@PutMapping
-	public Silla actualizar(@RequestBody Silla silla) {
-		return sillaService.actualizarSilla(silla);
+	public Reserva actualizar(@RequestBody Reserva reserva) {
+		return reservaService.actualizarReserva(reserva);
 	}
 	
 	@DeleteMapping
-	public void eliminar(@RequestBody Silla silla) {
-		sillaService.eliminar(silla);
+	public void eliminar(@RequestBody Reserva reserva) {
+		reservaService.eliminarReservas(reserva);
 	}
-
 }
